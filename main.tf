@@ -4,7 +4,7 @@ resource google_cloud_run_service default {
 
   name = var.name
   location = var.location
-  autogenerate_revision_name = true
+  autogenerate_revision_name = var.revision == null
   project = local.project_id
   
   metadata {
